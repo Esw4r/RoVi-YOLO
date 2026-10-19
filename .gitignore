@@ -1,57 +1,141 @@
-# ── Dataset & large binary files ──────────────────────────────────────────────
+# ── Datasets & Media ──────────────────────────────────────────────────────────
+dashcam_recordings/
 rdd2022/
+**/rdd2022/
+data/
+datasets/
+
+# Video files (dashcam recordings, raw footage)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+
+# Dataset archives & large compressed files
 *.zip
+*.tar
 *.tar.gz
+*.tgz
+*.rar
+*.7z
 
-# ── YOLO training outputs ──────────────────────────────────────────────────────
-runs/
-
-# ── Pretrained / fine-tuned weights ───────────────────────────────────────────
-# (Use the download link in README to get these)
+# ── Model Weights & Checkpoints ───────────────────────────────────────────────
+# (Download weights from release / drive links in README)
 *.pt
 *.pth
+*.pwf
 *.onnx
 *.torchscript
 *.engine
+*.safetensors
+*.ckpt
+*.weights
+*.bin
+*.h5
+*.tflite
+
+# ── Training & Evaluation Outputs / Artifacts ──────────────────────────────────
+runs/
+**/runs/
+artifacts/
+**/artifacts/
+wandb/
+lightning_logs/
+
+# Evaluation raw dumps & large predictions
+output/evaluation/*.json
+output/evaluation/*.npy
+output/evaluation/*.txt
+output/evaluation/baseline/
+**/output/evaluation/*.json
+**/output/evaluation/*.npy
+**/output/evaluation/*.txt
+**/output/evaluation/baseline/
+
+# ── Temporary & Build Directories ─────────────────────────────────────────────
+tmp/
+**/tmp/
+temp/
+**/temp/
+.chart-data-*/
+**/.chart-data-*/
+.doc-build/
+**/.doc-build/
+.ppt-build/
+**/.ppt-build/
+node_modules/
+**/node_modules/
 
 # ── Python ────────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
+*$py.class
 *.so
-*.egg
-*.egg-info/
-dist/
+*.pyd
+.Python
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
 .eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# ── Virtual environments ───────────────────────────────────────────────────────
+# ── Virtual Environments ──────────────────────────────────────────────────────
 venv/
 .venv/
 env/
 .env/
+ENV/
+env.bak/
+venv.bak/
 
-# ── Jupyter ────────────────────────────────────────────────────────────────────
+# ── Jupyter Notebooks ─────────────────────────────────────────────────────────
 .ipynb_checkpoints/
 *.ipynb
 
-# ── Kaggle credentials (never commit!) ────────────────────────────────────────
+# ── Credentials & Secrets (never commit!) ─────────────────────────────────────
 kaggle.json
 .kaggle/
+.env
+.env.*
+!.env.example
 
-# ── IDE / editor ──────────────────────────────────────────────────────────────
+# ── IDE & Editors ─────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 *.suo
 *.user
+*.useros
+*.sln.docstates
+*.swp
+*.swo
+*~
 
-# ── OS ────────────────────────────────────────────────────────────────────────
+# ── OS & Office Temporary Files ───────────────────────────────────────────────
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 desktop.ini
 
-# ── Misc ──────────────────────────────────────────────────────────────────────
+# Microsoft Office temporary lock files (Word / PowerPoint)
+~$*
+
+# ── Logs & Backups ────────────────────────────────────────────────────────────
 *.log
 *.tmp
 *.bak

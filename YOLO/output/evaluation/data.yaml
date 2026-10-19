@@ -1,0 +1,5 @@
+path: C:/Users/eshwar/Documents/CLG/SEM-7/NN-DL/Gopher-AI/rdd2022/RDD_SPLIT
+train: train/images
+val: val/images
+test: test/images
+names: [longitudinal crack, transverse crack, alligator crack, other corruption, Pothole]
